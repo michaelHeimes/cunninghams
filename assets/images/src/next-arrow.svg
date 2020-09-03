@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="71px" viewBox="0 0 114 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>next-arrow</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="next-arrow" fill-rule="nonzero">
+            <rect id="Rectangle_42" fill="#65AAAE" x="0" y="0" width="114" height="71"></rect>
+            <g id="Group_23" transform="translate(56.273000, 34.898000) rotate(-90.000000) translate(-56.273000, -34.898000) translate(39.773000, -2.102000)" fill="#FFFFFF">
+                <polygon id="Path_33" points="29.852 55.047 17.983 66.916 17.983 0 14.383 0 14.383 66.916 2.518 55.047 0 57.625 16.185 73.81 32.37 57.625"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

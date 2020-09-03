@@ -1,0 +1,30 @@
+header.header {
+	transition: transform .5s ease;
+	
+	div#top-bar-menu {
+		ul.menu {
+			li {
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+	
+.home,
+.page-template-get-in-touch {
+	
+	header.header {
+		div#top-bar-menu {
+			ul.menu {
+				li {
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	
+}
