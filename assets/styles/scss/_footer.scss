@@ -1,0 +1,104 @@
+footer.footer {
+	clear: both;
+	
+	.pre-footer {
+		background-color: $primary-color;
+		padding-top: 3.22em;
+		padding-bottom: 3.22em;
+		
+		@include breakpoint(medium) {
+			padding-top: 6.22em;
+			padding-bottom: 6.22em;			
+		}
+		
+		h2 {
+			color: $white;
+			font-size: rem-calc(30);
+			line-height: 1.52;
+			margin: 0;
+			
+			@include breakpoint(medium) {
+				font-size: rem-calc(40);
+			}
+
+			@include breakpoint(large) {
+				font-size: rem-calc(50);
+			}
+			
+		}
+	}
+	
+	
+	.inner-footer,
+	.post-footer {
+		background-color: #5B8D8E;
+		color: $white;
+		font-size: rem-calc(20);
+		line-height: 1.72;
+		
+		@include breakpoint(medium) {
+			font-size: rem-calc(25);
+		}
+		
+	}
+	
+	.inner-footer {
+		padding-top: 5.55em;
+		padding-bottom: 1.3em;
+		
+		.cell {
+			margin-bottom: 1.5em;
+		}
+		
+		a {
+			color: $white;
+		}
+		
+		.address {
+			.grid-x {
+				padding-top: 2.25em;
+			}
+		}
+				
+		.email-wrap {
+			overflow-wrap: break-word;
+		    word-wrap: break-word;
+		    -ms-word-break: break-all;
+		    word-break: break-all;
+		}
+		
+		.hours-wrap {
+			padding-top: 2.95em;
+			
+			div {
+				text-transform: uppercase;
+			}
+		}
+		
+		.menu {
+			a {
+				margin-bottom: 1.2em;
+				padding: 0;
+			}
+		}
+		
+	}
+	
+	.post-footer {
+		padding-bottom: 2.5em;
+		font-size: rem-calc(20);
+		color: #A9D0D3;
+		justify-content: space-between;
+		
+		@include breakpoint(medium) {
+			font-size: rem-calc(23);
+		}
+		
+		a {
+			color: #A9D0D3;
+		}
+		
+	}
+	
+		
+}

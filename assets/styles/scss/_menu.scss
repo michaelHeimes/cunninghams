@@ -1,0 +1,19 @@
+.page-template-page-menu {
+	
+	header.article-header.banner img {
+    	transform: scale(1) translate3d(calc(50vw - 160px),-94px,0);
+    	max-width: 320px;
+    	margin: auto;
+    	
+    	@include breakpoint(medium) {
+    		transform: scale(1) translate3d(10%,20%,0);
+    	}
+
+    	@include breakpoint(large) {
+    		transform: scale(1) translate3d(0,-0,0);
+    		max-width: 100%;
+    	}
+    	
+	}	
+	
+}

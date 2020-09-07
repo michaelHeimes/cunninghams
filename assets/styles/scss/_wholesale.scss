@@ -1,0 +1,73 @@
+.page-template-page-wholesale {
+	
+	header.article-header.banner {
+		img {
+			max-width: 320px;
+			transform: scale(1.5) translate3d(20vw,-50px,0);
+
+			@include breakpoint (medium) {
+				max-width: 600px;
+    			transform: scale(1.5) translate3d(90px,40px,0);
+    		}
+			
+			@include breakpoint (large) {
+				max-width: 100%;
+    			transform: scale(1.5) translate3d(190px,66px,0);
+    		}
+    	}
+    }
+    
+    .contact-card {
+	    
+	    @include breakpoint (tablet) {
+	    	margin-bottom: -5.25em;
+	    }
+	    
+    }
+    
+    section.partner-logos {
+    	padding-top: 4.25em;
+    	padding-bottom: 3.9em;
+    	
+    	@include breakpoint (medium) {
+	    	padding-top: 7.25em;
+	    	padding-bottom: 5.9em;	    	
+    	}
+    	
+    	h2 {
+	    	margin-bottom: 1.6em;
+    	}
+    	
+    	.single-logo {
+	    	flex: 0 0 auto;
+	    	width: 50%;
+	    	
+	    	@media screen and (min-width: 400px) {
+		    	width: 33.3333%;
+	    	}
+	    	
+	    	@include breakpoint (medium) {
+		    	width: 25%;
+	    	}
+	    	
+	    	@media screen and (min-width: 768px) {
+		    	width: 20%;
+	    	}
+	    	
+	    	@include breakpoint (tablet) {
+		    	width: 14%;
+	    	}
+
+	    	@include breakpoint (xlarge) {
+		    	width: 10%;
+	    	}
+	    	
+	    	a.inner {
+		    	display: block;
+		    	margin-bottom: 3.1em;
+	    	}
+    	}
+    	
+	}
+	
+}

@@ -37,11 +37,24 @@ get_header(); ?>
 					<?php get_template_part('parts/partial', 'contact-card');?>
 						
 				</section>
+				
+				
+				<section class="full-width-img text-center">
+					
+					<?php 
+					$image = get_field('fwi_image');
+					if( !empty( $image ) ): ?>
+					    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>					
+					
+				</section>
 
 
-				<section class="partner-logos">
+				<section class="partner-logos cream-bg">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">	
+							
+							<h2 class="cell small-12 text-center"><?php the_field('wp_heading');?></h2>
 										
 						<?php			
 						$args = array(  
@@ -58,7 +71,7 @@ get_header(); ?>
 					        
 						    while ( $loop->have_posts() ) : $loop->the_post();?>
 						    
-							<div class="single-logo cell shrink">
+							<div class="single-logo cell small-6">
 								
 								<span class="show-for-sr"><?php the_title();?></span>
 								

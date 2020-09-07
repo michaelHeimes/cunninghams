@@ -14,7 +14,7 @@
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
 								<div class="cell small-12 medium-8 medium-offset-2 text-center">
-									<span><?php the_field('pre-footer_copy', 'option');?></span>
+									<h2><?php the_field('pre-footer_copy', 'option');?></h2>
 								</div>
 							</div>
 						</div>
@@ -32,7 +32,7 @@
 									<?php endif; ?>
 								</div>
 								
-								<div class="cell small-12 medium-6 large-4">
+								<div class="cell small-12 tablet-6 large-4">
 									
 									<div class="address">
 										<?php the_field('address', 'option');?>
@@ -53,17 +53,22 @@
 									
 								</div>
 
-								<div class="cell small-12 medium-6 large-4">
+								<div class="cell small-12 tablet-6 large-4">
 
 									<div class="grid-x grid-padding-x">
 										
 										<div class="cell small-12">
-											<a href="tel:<?php the_field('phone_number', 'option');?>" target="_blank">T. <?php the_field('phone_number', 'option');?></a>
-	
-											<a href="mailto:<?php the_field('email_address', 'option');?>" target="_blank">E. <?php the_field('email_address', 'option');?></a>
+											<div>
+												<a href="tel:<?php the_field('phone_number', 'option');?>">T. <?php the_field('phone_number', 'option');?></a>
+											</div>
+											
+											<div class="email-wrap">
+												<a href="mailto:<?php the_field('email_address', 'option');?>">E. <?php the_field('email_address', 'option');?></a>
+											</div>
 										</div>
 										
-										<div class="cell small-12">
+										<div class="hours-wrap cell small-12">
+											<div>Hours</div>
 											<?php the_field('hours', 'option');?>
 										</div>											
 									
@@ -84,7 +89,7 @@
 					
 					<div class="post-footer">
 						<div class="grid-container">
-							<div class="grid-x grid-padding-x">		
+							<div class="grid-x grid-padding-x align-justify">		
 
 								<div class="small-12 medium-shrink cell">
 									<p class="source-org copyright">&copy; Copyright <?php echo date('Y'); ?> Cunningham's Cafe + Bakery.</p>

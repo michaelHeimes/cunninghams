@@ -1,0 +1,54 @@
+.page-template-page-catering {
+	
+	header.article-header.banner img {
+		max-width: 320px;
+    	transform: scale(1) translate3d(0,-114px,0);
+    	
+    	@include breakpoint(medium) {
+    		transform: scale(1) translate3d(30%,0,0);
+    	}
+
+    	@include breakpoint(large) {
+    		max-width: 100%;
+    		transform: scale(1) translate3d(0,0,0);
+    	}
+    	
+	}
+	
+	.accordion {
+		.accordion-item {
+			
+			a.accordion-title:before {
+				top: 6.4em;
+			}
+			
+			h2 {
+				padding: 0.64em 0;
+			}
+			
+			.big-copy {
+				color: $text;
+				padding-top: 2.44em;
+			}
+		}
+	}
+	
+	.img-copy {
+		padding-top: 3em;
+		padding-bottom: 0em;
+		
+		@include breakpoint(medium) {
+			padding-top: 5em;
+			padding-bottom: 6em;			
+		}
+    
+		.right {
+			padding-top: 3.2em;
+		}
+	}
+	
+	.contact-card {
+		padding-bottom: 8.7em;		
+	}
+	
+}

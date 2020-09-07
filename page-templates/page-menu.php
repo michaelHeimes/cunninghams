@@ -23,7 +23,7 @@ get_header(); ?>
 			    <section class="s1">
 				    <div class="grid-container">
 						<div class="grid-x grid-padding-x">
-						    <div class="cell small-12">
+						    <div class="big-copy cell small-12">
 								<?php the_field('full_width_copy');?>
 							</div>
 						</div>
@@ -33,7 +33,7 @@ get_header(); ?>
 			    
 				<section class="menu-items">
 					<div class="grid-container">
-						<div class="grid-x grid-padding-x">
+						<div class="grid-x grid-margin-x">
 														
 							<?php if( have_rows('menu_categories') ):?>
 								<?php while ( have_rows('menu_categories') ) : the_row();?>	
@@ -44,9 +44,9 @@ get_header(); ?>
 									
 									<ul class="accordion cell small-12" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 										<li class="accordion-item" data-accordion-item>
-											<a href="#" class="accordion-title"><?php the_sub_field('category_name');?></a>
+											<a href="#" class="accordion-title"><h2><?php the_sub_field('category_name');?></h2></a>
 										
-											<div class="accordion-content" data-tab-content>
+											<div class="accordion-content big-copy" data-tab-content>
 												
 												<?php if( have_rows('items') ):?>
 													<?php while ( have_rows('items') ) : the_row();?>	

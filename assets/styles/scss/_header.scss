@@ -2,18 +2,100 @@ header.header {
 	transition: transform .5s ease;
 	
 	div#top-bar-menu {
+		padding: .9375rem;
+		transition: padding 0.4s ease;
+		
+		@include breakpoint(xlarge) {
+			padding: 1.876rem .9375rem;
+		}
+
+		@include breakpoint(xxlarge) {
+			padding: 1.876rem;
+		}		
+		
 		ul.menu {
 			li {
 				a {
 					color: $black;
+					font-size: rem-calc(16);
+					text-transform: uppercase;
+					
+					@include breakpoint(xlarge) {
+						font-size: rem-calc(19);
+					}
+					
 				}
+				
+				a.logo-link {
+					padding: 0;
+					img.header-logo {
+						max-width: 180px;
+						
+						@include breakpoint(medium) {
+							max-width: 220px;
+						}
+						
+						@include breakpoint(xlarge) {
+							max-width: none;
+						}
+						
+					}
+					
+				}
+				
+				a.mobile-toggle {
+					padding: 0;
+					position: relative;
+					width: 36px;
+					height: 26px;
+					span {
+						position: absolute;
+						display: block;
+						background-color: $black;
+						width: 100%;
+						height: 2px;
+						border-radius: 2px;
+						
+					&:nth-child(1) {
+						top: 5px;
+					}	
+
+					&:nth-child(2) {
+						top: 12px;
+					}	
+					
+					&:nth-child(3) {
+						bottom: 5px;
+					}	
+						
+					}
+				}
+				
 			}
+			
 		}
 	}
+	
+	a.order-now {
+		font-size: 1rem;
+		padding: 1.1595em 1.85em;
+		font-size: rem-calc(18);
+		
+		@include breakpoint(xlarge) {
+			font-size: rem-calc(20);
+			padding: 1.1595em 1.85em;
+		}
+		
+		@include breakpoint(xxlarge) {
+			font-size: rem-calc(22);
+		}
+		
+	}
+		
 }
 	
 .home,
-.page-template-get-in-touch {
+.page-template-page-contact {
 	
 	header.header {
 		div#top-bar-menu {
@@ -23,8 +105,81 @@ header.header {
 						color: $white;
 					}
 				}
+				
+				a.mobile-toggle span {
+						background-color: $white;
+				}
+				
 			}
 		}
+		
+		a.button.order-now {
+			color: $white;
+			border-color: $white;
+		}
+		
 	}
 	
+}
+
+.page-template-page-about,
+.page-template-page-catering {
+	.top-bar,
+	.top-bar ul,
+	header.article-header.banner {
+		background-color: $cream;
+	}
+}
+
+.page-template-page-menu,
+.page-template-page-wholesale {
+	.top-bar,
+	.top-bar ul,
+	header.article-header.banner {
+		background-color: $coral;
+	}
+}
+
+header.article-header.banner {
+
+	.grid-x {
+		height: 240px;
+		margin-bottom: 12.1em;
+		
+		@include breakpoint(large) {
+			height: 540px;
+		}
+		
+		h1.page-title {
+			height: 100%;
+			position: relative;
+			
+			span {
+				position: absolute;
+				top: 50%;
+				left: .9375rem;
+				right: .9375rem;
+				transform: translateY(-50%);
+			}
+			
+		}
+		
+	}
+
+}
+
+.page-template-page-contact {
+	header.article-header.banner {
+		background-color: $primary-color;
+		
+		.grid-x {
+			height: 284px;
+			align-content: flex-end;
+			
+			h1.page-title {
+				color: $white;
+			}
+			
+		}
+	}	
 }

@@ -23,7 +23,7 @@ get_header(); ?>
 			    <section class="s1">
 				    <div class="grid-container">
 						<div class="grid-x grid-padding-x">
-						    <div class="cell small-12">
+						    <div class="big-copy cell small-12">
 								<?php the_field('full_width_copy');?>
 							</div>
 						</div>
@@ -33,15 +33,16 @@ get_header(); ?>
 			    
 				<section class="menu-items">
 					<div class="grid-container">
-						<div class="grid-x grid-padding-x">
+						<div class="grid-x grid-margin-x">
 		
 							<ul class="accordion cell small-12" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 								<li class="accordion-item" data-accordion-item>
-									<a href="#" class="accordion-title"><?php the_field('menu_heading');?>
-										<div><?php the_field('menu_footnote');?></div>
+									<a href="#" class="accordion-title">
+										<h2><?php the_field('menu_heading');?></h2>
+										<div class="big-copy"><?php the_field('menu_footnote');?></div>
 									</a>
 								
-									<div class="accordion-content" data-tab-content>
+									<div class="accordion-content big-copy" data-tab-content>
 										
 										<?php if( have_rows('items') ):?>
 											<?php while ( have_rows('items') ) : the_row();?>	
@@ -75,21 +76,23 @@ get_header(); ?>
 				
 				
 				<section class="slider-1">
-					
-				<?php if( have_rows('s1_slider') ):?>
-					<div class="click-right-slider">
-						<?php while ( have_rows('s1_slider') ) : the_row();?>	
-						
-							<?php 
-							$image = get_sub_field('single_slide');
-							if( !empty( $image ) ): ?>
-							    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
-					
-						<?php endwhile;?>
-					</div>
-					<?php endif;?>
-					
+				    <div class="grid-container">
+						<div class="grid-x grid-margin-x">	
+							<?php if( have_rows('s1_slider') ):?>
+							<div class="click-right-slider cell small-12">
+								<?php while ( have_rows('s1_slider') ) : the_row();?>	
+								
+									<?php 
+									$image = get_sub_field('single_slide');
+									if( !empty( $image ) ): ?>
+									    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<?php endif; ?>
+							
+								<?php endwhile;?>
+							</div>
+							<?php endif;?>
+						</div>
+						</div>
 				</section>
 				
 				
@@ -100,7 +103,7 @@ get_header(); ?>
 						<?php if( have_rows('half_image_and_half_copy') ):?>
 							<?php while ( have_rows('half_image_and_half_copy') ) : the_row();?>
 	
-							<div class="cell small-12 medium-6">
+							<div class="left cell small-12 medium-6">
 								<?php 
 								$image = get_sub_field('image');
 								if( !empty( $image ) ): ?>
@@ -108,7 +111,7 @@ get_header(); ?>
 								<?php endif; ?>
 							</div>	
 	
-							<div class="cell small-12 medium-6">
+							<div class="right big-copy cell small-12 medium-6">
 								<?php the_sub_field('copy');?>
 							</div>
 													
@@ -121,21 +124,25 @@ get_header(); ?>
 
 
 				<section class="slider-2">
+				    <div class="grid-container">
+						<div class="grid-x grid-margin-x">	
 					
-				<?php if( have_rows('s2_slider') ):?>
-					<div class="click-right-slider">
-						<?php while ( have_rows('s2_slider') ) : the_row();?>	
-						
-							<?php 
-							$image = get_sub_field('single_slide');
-							if( !empty( $image ) ): ?>
-							    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
+							<?php if( have_rows('s2_slider') ):?>
+							<div class="click-right-slider cell small-12">
+								<?php while ( have_rows('s2_slider') ) : the_row();?>	
+								
+									<?php 
+									$image = get_sub_field('single_slide');
+									if( !empty( $image ) ): ?>
+									    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<?php endif; ?>
+							
+								<?php endwhile;?>
+							</div>
+							<?php endif;?>
 					
-						<?php endwhile;?>
-					</div>
-					<?php endif;?>
-					
+						</div>
+				    </div>
 				</section>
 				
 				

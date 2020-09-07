@@ -23,8 +23,8 @@ get_header(); ?>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							
-							<div class="cell small-12 medium-10 medium-offset-1 large-4 large-offset-4 text-center">
-								<?php the_field('intro_copy');?>
+							<div class="cell small-12 medium-10 medium-offset-1 large-6 large-offset-3 text-center">
+								<h3><?php the_field('intro_copy');?></h3>
 							</div>
 														
 						</div>
@@ -49,7 +49,7 @@ get_header(); ?>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							
-							<div class="cell small-12 medium-10 medium-offset-1 large-4 large-offset-4 text-center">
+							<div class="cell small-12 medium-10 medium-offset-1 large-6 large-offset-3 text-center">
 								
 								<h2><?php the_field('contact_heading');?></h2>
 								
