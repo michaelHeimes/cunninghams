@@ -96,7 +96,7 @@
 								</div>
 
 								<div class="small-12 medium-shrink cell">
-									<p class="source-org copyright">Made by <a href="https://proprdesign.com/" target="_blank">Propr Design</a></p>
+									<p class="source-org copyright"><a href="https://proprdesign.com/" target="_blank">Made by Propr</a></p>
 								</div>
 								
 							</div>

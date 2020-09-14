@@ -37,7 +37,7 @@ get_header(); ?>
 						<div class="grid-x grid-padding-x">
 							
 							<div class="cell small-12">
-								
+								<?php gravity_form( 1, false, false, false, '', true );?>
 							</div>
 					
 						</div>

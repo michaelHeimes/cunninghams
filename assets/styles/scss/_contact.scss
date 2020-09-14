@@ -1,5 +1,11 @@
 .page-template-page-contact {
 	
+	section.intro-wrap {
+		h3 {
+			line-height: 1.8;
+		}
+	}
+	
 	section.contact-wrap {
 		padding-bottom: 14.7em;
 		
@@ -7,6 +13,127 @@
 			font-size: rem-calc(36);
 			color: $text;
 		}
+	}
+	
+	section.form-wrap {
+		padding-top: 2.9em;
+	
+		ul.gfield_radio {
+			padding-bottom: 7.7em;
+			display: flex;
+			flex-wrap: wrap;
+			
+			li {
+				flex: 0 0 auto;
+			    min-height: 0;
+			    min-width: 0;
+			    width: 50%;
+			    font-size: rem-calc(50);
+			    color: $secondary-color;
+			    position: relative;
+			    
+			&:before {
+				content: '';
+				position: absolute;
+				top: .4em;
+				width: 36px;
+				height: 36px;
+				background-color: $white;
+				border: 2px solid $secondary-color;
+				border-radius: 100%;
+			}
+			
+			&.clicked {
+				&:before {
+					background-color: $secondary-color;
+					border-color: $black;
+				}
+			}
+			    
+			    input[type="radio"] {
+				    opacity: 0;
+				    
+					+ label {
+						margin: 0;
+					    padding-left: 1.2em;
+					    color: $secondary-color;
+					}
+				    
+				    &:checked {
+					    
+					    &+ label {
+						    font-weight: normal;
+					    }
+					    
+				    }
+				    
+			    }
+			    
+			}
+			
+		}
+		
+		.gform_wrapper {
+		
+			li.gfield {
+				
+				@media only screen and (min-width: 641px) {
+					padding-right: 5%;					
+				}
+				
+				@include breakpoint (large) {
+					padding-right: 126px;
+				}
+				
+				label {
+					font-weight: 500;
+					font-size: rem-calc(30);
+					text-transform: uppercase;
+				}
+				
+				.ginput_container {
+					margin-top: 1.2em;
+					
+					input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) , textarea {
+						padding: 2em 0;
+						font-size: rem-calc(30);
+						box-shadow: 0 0 0;
+						border: 0;
+						border-bottom: 1px solid #727272;
+						
+						&::placeholder {
+							color:  #D1D1D1;
+							font-size: rem-calc(30);
+						}
+						
+					}
+					
+					textarea {
+						height: 122px;
+					}
+				
+				}
+				
+			}
+			
+		}
+		
+		.gform_footer.top_label {
+			padding-top: 6.45em;
+			padding-bottom: 7.95em;
+			text-align: center;
+			
+			input {
+				font-size: rem-calc(30);
+				border-color: $primary-color;
+				background-color: $primary-color;
+				color: $white;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+			
+		}
+		
 	}
 	
 }
