@@ -241,6 +241,37 @@
 			margin: 0;
 			padding-bottom: 1.28em;
 		}
+		
+		#sb_instagram {
+			height: calc(100% + 52px);
+
+			#sbi_images {
+				height: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				
+				.sbi_item {
+					height: 50%;
+					
+				&:first-child {
+					width: 40%;
+					height: 100%;
+				}
+					
+					.sbi_photo_wrap {
+						height: 100%;
+						
+						a {
+							height: 100% !important;
+						}
+											
+					}
+					
+				}
+			}	
+		}
+		
 	}
 	
 	

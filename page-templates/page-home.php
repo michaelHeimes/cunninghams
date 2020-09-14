@@ -195,7 +195,7 @@ get_header(); ?>
 								
 							</div>
 							
-							<div class="cell small-12 medium-4">
+							<div class="cell small-12 medium-auto">
 								
 								<?php echo do_shortcode('[instagram-feed]');?>
 								
