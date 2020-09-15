@@ -54,8 +54,8 @@
 		});
 	}
 	
+// 	Custom Instagram Feed
 	if ($('div#sb_instagram').length) {
-		
 		$('.sbi_item').each(function( index, element ) {
 			
 			var $this = $(this); 
@@ -71,7 +71,6 @@
 			});
 		
 		});
-		
 	}
 	
 	

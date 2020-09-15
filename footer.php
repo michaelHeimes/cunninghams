@@ -9,12 +9,16 @@
  ?>
 					
 				<footer class="footer" role="contentinfo">
-					
+										
 					<div class="pre-footer">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
 								<div class="cell small-12 medium-8 medium-offset-2 text-center">
-									<h2><?php the_field('pre-footer_copy', 'option');?></h2>
+									
+									<a href="<?php the_field('fwcta_page_link');?>">
+										<h2><?php the_field('fwcta_text');?></h2>
+									</a>
+								
 								</div>
 							</div>
 						</div>

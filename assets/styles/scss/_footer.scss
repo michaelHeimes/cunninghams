@@ -11,6 +11,13 @@ footer.footer {
 			padding-bottom: 6.22em;			
 		}
 		
+		a {
+			color: $white;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		
 		h2 {
 			color: $white;
 			font-size: rem-calc(30);
