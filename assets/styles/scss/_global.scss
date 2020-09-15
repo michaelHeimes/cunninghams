@@ -238,6 +238,13 @@ a.button {
 		color: $white;
 		font-weight: 500;
 		text-transform: uppercase;	
+		
+	&:hover {
+		span {
+			text-decoration: underline;
+		}
+	}
+		
 	}
 	
 }
