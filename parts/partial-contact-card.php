@@ -5,14 +5,14 @@
 			
 				<div class="grid-x grid-padding-x">
 					
-					<div class="copy-wrap cream-bg cell small-12">
+					<div class="fade-in-left copy-wrap cream-bg cell small-12">
 						<h3><?php the_field('cc_copy');?></h3>
 					</div>
 					
 					<div class="contact-wrap cell small-12 medium-8">
 						
-						<h4><?php the_field('cc_name');?></h4>
-						<div><a class="big-copy" href="mailto:<?php the_field('cc_email_address');?>"><?php the_field('cc_email_address');?></a></div>
+						<h4 class="fade-in-left"><?php the_field('cc_name');?></h4>
+						<div class="fade-in-left"><a class="big-copy" href="mailto:<?php the_field('cc_email_address');?>"><?php the_field('cc_email_address');?></a></div>
 						
 					</div>
 

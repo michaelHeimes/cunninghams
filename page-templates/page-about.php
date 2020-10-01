@@ -45,7 +45,7 @@ get_header(); ?>
 											<?php the_sub_field('copy');?>
 										</div>
 										
-										<div class="img-wrap cell small-12 medium-6">
+										<div class="img-wrap fade-in-right cell small-12 medium-6">
 											<?php 
 											$image = get_sub_field('image');
 											if( !empty( $image ) ): ?>
@@ -63,7 +63,7 @@ get_header(); ?>
 				</section>
 				
 
-				<section class="s2">
+				<section class="s2 fade-in">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							
@@ -95,13 +95,13 @@ get_header(); ?>
 											<?php 
 											$image = get_sub_field('image');
 											if( !empty( $image ) ): ?>
-											    <img class="lot-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+											    <img class="lot-img fade-in" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 											<?php endif; ?>
 											
 										    <?php 
 											$image = get_sub_field('s3_parking_icon');
 											if( !empty( $image ) ): ?>
-											    <img class="p-icon" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+											    <img class="p-icon fade-in-right" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 											<?php endif; ?>
 											
 										</div>
@@ -130,7 +130,7 @@ get_header(); ?>
 							
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<div class="cell small-12">
+							<div class="fade-in cell small-12">
 							
 								<?php if( have_rows('s3_image_slider') ):?>
 								<div class="click-right-slider">

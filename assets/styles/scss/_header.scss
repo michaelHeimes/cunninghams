@@ -72,7 +72,8 @@ header.header {
 		text-transform: none;
 		font-size: 1rem;
 		padding: 0.55em 0.9675em;
-		font-size: rem-calc(20);		
+		font-size: rem-calc(20);
+		transition: all 0.25s ease;	
 	}
 		
 }
@@ -99,6 +100,12 @@ header.header {
 		a.button.order-now {
 			color: $white;
 			border-color: $white;
+			
+		&:hover {
+			background-color: $white;
+			color: $primary-color;
+		}
+			
 		}
 		
 	}

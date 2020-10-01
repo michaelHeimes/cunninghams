@@ -7,6 +7,11 @@ Stylesheet: Global Stylesheet
 /*********************
 CUSTOM GLOBAL
 *********************/
+.article-header.banner .img-wrap {
+	opacity: 0;
+	transform: translateX(70px);
+}
+
 .cream-bg {
 	background-color: $cream;
 	color: $black;
@@ -39,6 +44,12 @@ a.button {
 	border: 2px solid $secondary-color;
 	padding: .6675em 0.9866em;
 	font-size: rem-calc(16);
+	transition: all 0.25s ease;
+	
+	&:hover {
+		background-color: $secondary-color;
+		color: $white;
+	}
 
 	@include breakpoint (medium) {
 		font-size: rem-calc(18);
@@ -48,6 +59,12 @@ a.button {
 		color: $white;
 		background-color: $primary-color;
 		border-color: $primary-color;
+		
+		&:hover {
+			background-color: transparent;
+			color: $primary-color;
+		}
+		
 	}
 	
 }

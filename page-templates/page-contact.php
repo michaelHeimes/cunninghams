@@ -36,7 +36,7 @@ get_header(); ?>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							
-							<div class="cell small-12">
+							<div class="fade-in cell small-12">
 								<?php gravity_form( 1, false, false, false, '', true );?>
 							</div>
 					
@@ -49,7 +49,7 @@ get_header(); ?>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							
-							<div class="cell small-12 medium-10 medium-offset-1 large-6 large-offset-3 text-center">
+							<div class="fade-in-up cell small-12 medium-10 medium-offset-1 large-6 large-offset-3 text-center">
 								
 								<h2><?php the_field('contact_heading');?></h2>
 								

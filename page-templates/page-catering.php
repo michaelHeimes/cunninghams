@@ -79,7 +79,7 @@ get_header(); ?>
 				    <div class="grid-container">
 						<div class="grid-x grid-margin-x">	
 							<?php if( have_rows('s1_slider') ):?>
-							<div class="click-right-slider cell small-12">
+							<div class="click-right-slider fade-in cell small-12">
 								<?php while ( have_rows('s1_slider') ) : the_row();?>	
 								
 									<?php 
@@ -107,11 +107,11 @@ get_header(); ?>
 								<?php 
 								$image = get_sub_field('image');
 								if( !empty( $image ) ): ?>
-								    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								    <img class="fade-in-left" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 								<?php endif; ?>
 							</div>	
 	
-							<div class="right big-copy cell small-12 medium-6">
+							<div class="right fade-in-up big-copy cell small-12 medium-6">
 								<?php the_sub_field('copy');?>
 							</div>
 													
@@ -128,7 +128,7 @@ get_header(); ?>
 						<div class="grid-x grid-margin-x">	
 					
 							<?php if( have_rows('s2_slider') ):?>
-							<div class="click-right-slider cell small-12">
+							<div class="fade-in click-right-slider cell small-12">
 								<?php while ( have_rows('s2_slider') ) : the_row();?>	
 								
 									<?php 
