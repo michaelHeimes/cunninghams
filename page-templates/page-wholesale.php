@@ -23,7 +23,7 @@ get_header(); ?>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							
-							<div class="cell small-12">
+							<div class="big-copy cell small-12">
 								<?php the_field('full_width_copy');?>
 							</div>
 														
@@ -55,62 +55,51 @@ get_header(); ?>
 						<div class="grid-x grid-padding-x">	
 							
 							<h2 class="cell small-12 text-center"><?php the_field('wp_heading');?></h2>
-										
-						<?php			
-						$args = array(  
-					        'post_type' => 'partner',
-					        'post_status' => 'publish',
-					        'posts_per_page' => -1,
-					        'orderby' => 'title',
-					        'order' => 'ASC'
-					    );
-					
-					    $loop = new WP_Query( $args ); 
-					    
-					    if ( $loop->have_posts() ) : 
-					        
-						    while ( $loop->have_posts() ) : $loop->the_post();?>
-						    
-							<div class="single-logo cell small-6">
+							
+							
+							<?php if( have_rows('partner_logos') ):?>
+								<?php while ( have_rows('partner_logos') ) : the_row();?>	
 								
-								<span class="show-for-sr"><?php the_title();?></span>
-								
-								<?php if($link = get_field('link')):?>
-								
-									<a class="inner" href="<?php echo $link;?>" target="_blank">
-										
-										<?php 
-										$image = get_field('logo');
-										if( !empty( $image ) ): ?>
-										    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-										<?php endif; ?>
-										
-									</a>
-								
-								<?php else:?>
+								<div class="single-logo cell small-6">
 									
-									<div class="inner">
-										<?php 
-										$image = get_field('logo');
-										if( !empty( $image ) ): ?>
-										    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-										<?php endif; ?>
-									</div>
+									<?php if( have_rows('single_partner') ):?>
+										<?php while ( have_rows('single_partner') ) : the_row();?>	
 									
-								<?php endif;?>
-								
-							</div>
-						    	
-						    <?php
-						    endwhile;
-						    
-						else:
-						
-							echo 'no logos';
-					
-						endif;
-					    wp_reset_postdata(); 
-					    ?>
+
+									
+		<!-- 									<span class="show-for-sr"><?php the_title();?></span> -->
+											
+											<?php if($link = get_sub_field('link')):?>
+											
+												<a class="inner" href="<?php echo $link;?>" target="_blank">
+													
+													<?php 
+													$image = get_sub_field('logo');
+													if( !empty( $image ) ): ?>
+													    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+													<?php endif; ?>
+													
+												</a>
+											
+											<?php else:?>
+												
+												<div class="inner">
+													<?php 
+													$image = get_sub_field('logo');
+													if( !empty( $image ) ): ?>
+													    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+													<?php endif; ?>
+												</div>
+												
+											<?php endif;?>
+											
+										<?php endwhile;?>
+									<?php endif;?>
+									
+								</div>
+							
+								<?php endwhile;?>
+							<?php endif;?>
 					    
 						</div>
 						

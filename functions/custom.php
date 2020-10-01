@@ -42,3 +42,10 @@ if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
 	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
 	
 }
+
+// Add Commas to ACF Number Fields
+add_filter('acf/format_value/type=number', 'fix_number', 30, 3);
+function fix_number($value, $post_id, $field) {
+  $value = number_format($value);
+  return $value;
+}
