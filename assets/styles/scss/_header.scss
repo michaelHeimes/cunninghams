@@ -17,13 +17,8 @@ header.header {
 			li {
 				a {
 					color: $black;
-					font-size: rem-calc(16);
+					font-size: rem-calc(15);
 					text-transform: uppercase;
-					
-					@include breakpoint(xlarge) {
-						font-size: rem-calc(19);
-					}
-					
 				}
 				
 				a.logo-link {
@@ -32,11 +27,7 @@ header.header {
 						max-width: 180px;
 						
 						@include breakpoint(medium) {
-							max-width: 220px;
-						}
-						
-						@include breakpoint(xlarge) {
-							max-width: none;
+							max-width: 209px;
 						}
 						
 					}
@@ -77,19 +68,11 @@ header.header {
 	}
 	
 	a.order-now {
+		font-family: $header-font-family;
+		text-transform: none;
 		font-size: 1rem;
-		padding: 1.1595em 1.85em;
-		font-size: rem-calc(18);
-		
-		@include breakpoint(xlarge) {
-			font-size: rem-calc(20);
-			padding: 1.1595em 1.85em;
-		}
-		
-		@include breakpoint(xxlarge) {
-			font-size: rem-calc(22);
-		}
-		
+		padding: 0.55em 0.9675em;
+		font-size: rem-calc(20);		
 	}
 		
 }
@@ -143,11 +126,11 @@ header.header {
 header.article-header.banner {
 
 	.grid-x {
-		height: 240px;
+		height: 144px;
 		margin-bottom: 12.1em;
 		
-		@include breakpoint(large) {
-			height: 540px;
+		@include breakpoint(tablet) {
+			height: 324px;
 		}
 		
 		h1.page-title {
@@ -175,6 +158,7 @@ header.article-header.banner {
 		.grid-x {
 			height: 284px;
 			align-content: flex-end;
+			margin-bottom: 4.375em;
 			
 			h1.page-title {
 				color: $white;

@@ -3,15 +3,16 @@
 	header.article-header.banner {
 		
 		img {
-			transform: scale(1.5) translate3d(calc(50vw - 110px), -36px, 0px);
+			transform: scale(1.5) translate3d(calc(50vw - 110px), -20px, 0px);
 			max-width: 320px;
 			margin: auto;
 			
 			@include breakpoint(medium) {
-				transform: scale(1.5) translate3d(90px, 66px, 0px);
+				transform: scale(1.5) translate3d(82px,32px,0);
 			}			
 
-			@include breakpoint(large) {
+			@include breakpoint(tablet) {
+				transform: scale(.9) translate3d(148px,32px,0);
 				max-width: 100%;
 			}	
 			
@@ -32,8 +33,8 @@
 	
 	
 	section.s2 {
-		padding-top: 8.8em;
-		padding-bottom: 8.8em;
+		padding-top: 5.2em;
+		padding-bottom: 5.2em;
 		position: relative;
 		background-color: $coral;
 	}
@@ -42,8 +43,8 @@
 	.parking {
 		
 		.half-half-wrap {
-			padding-top: 9.3em;
-			padding-bottom: 5.1em;
+			padding-top: 5.58em;
+			padding-bottom: 3.06em;
 			
 			.left,
 			.right {

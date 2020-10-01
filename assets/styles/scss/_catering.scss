@@ -1,18 +1,24 @@
 .page-template-page-catering {
 	
-	header.article-header.banner img {
-		max-width: 320px;
-    	transform: scale(1) translate3d(0,-114px,0);
+	header.article-header.banner .img-wrap {
+		text-align: right;
+		
+		img {
+			max-width: 320px;
+	    	transform: scale(1) translate3d(0,-24px,0);
     	
     	@include breakpoint(medium) {
-    		transform: scale(1) translate3d(30%,0,0);
+	    	max-width: 65%;
+    		transform: scale(1) translate3d(0,0,0);
     	}
 
-    	@include breakpoint(large) {
-    		max-width: 100%;
+    	@include breakpoint(tablet) {
+    		max-width: 738px;
     		transform: scale(1) translate3d(0,0,0);
     	}
     	
+    	}
+	
 	}
 	
 	.accordion {
@@ -34,21 +40,21 @@
 	}
 	
 	.img-copy {
-		padding-top: 3em;
+		padding-top: 1.8em;
 		padding-bottom: 0em;
 		
 		@include breakpoint(medium) {
-			padding-top: 5em;
-			padding-bottom: 6em;			
+			padding-top: 3em;
+			padding-bottom: 3.6em;			
 		}
     
 		.right {
-			padding-top: 3.2em;
+			padding-top: 1.92em;
 		}
 	}
 	
 	.contact-card {
-		padding-bottom: 8.7em;		
+		padding-bottom: 5.22em;		
 	}
 	
 }

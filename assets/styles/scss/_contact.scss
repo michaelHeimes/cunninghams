@@ -7,10 +7,10 @@
 	}
 	
 	section.contact-wrap {
-		padding-bottom: 14.7em;
+		padding-bottom: 8.82em;
 		
 		a {
-			font-size: rem-calc(36);
+			font-size: rem-calc(22);
 			color: $text;
 		}
 	}
@@ -19,7 +19,7 @@
 		padding-top: 2.9em;
 	
 		ul.gfield_radio {
-			padding-bottom: 7.7em;
+			padding-bottom: 4.62em;
 			display: flex;
 			flex-wrap: wrap;
 			
@@ -32,7 +32,7 @@
 			    min-height: 0;
 			    min-width: 0;
 			    width: 100%;
-			    font-size: rem-calc(50);
+			    font-size: rem-calc(18);
 			    color: $secondary-color;
 			    position: relative;
 			    
@@ -44,8 +44,8 @@
 				content: '';
 				position: absolute;
 				top: .4em;
-				width: 36px;
-				height: 36px;
+				width: 22px;
+				height: 22px;
 				background-color: $white;
 				border: 2px solid $secondary-color;
 				border-radius: 100%;
@@ -89,7 +89,7 @@
 
 				label {
 					font-weight: 500;
-					font-size: rem-calc(30);
+					font-size: rem-calc(18);
 					text-transform: uppercase;
 				}
 				
@@ -97,15 +97,15 @@
 					margin-top: 1.2em;
 					
 					input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) , textarea {
-						padding: 2em 0;
-						font-size: rem-calc(30);
+						padding: 1.2em 0;
+						font-size: rem-calc(18);
 						box-shadow: 0 0 0;
 						border: 0;
 						border-bottom: 1px solid #727272;
 						
 						&::placeholder {
 							color:  #D1D1D1;
-							font-size: rem-calc(30);
+							font-size: rem-calc(18);
 						}
 						
 					}
@@ -134,12 +134,12 @@
 		}
 		
 		.gform_footer.top_label {
-			padding-top: 6.45em;
-			padding-bottom: 7.95em;
+			padding-top: 3.87em;
+			padding-bottom: 4.77em;
 			text-align: center;
 			
 			input {
-				font-size: rem-calc(30);
+				font-size: rem-calc(18);
 				border-color: $primary-color;
 				background-color: $primary-color;
 				color: $white;

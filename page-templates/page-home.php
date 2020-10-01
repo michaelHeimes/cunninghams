@@ -19,6 +19,7 @@ get_header(); ?>
 			    
 			    <?php endwhile; endif; ?>	
 			    
+			    
 			    <section class="hero max">
 				    
 				    <?php if( have_rows('hero_slider') ):?>
@@ -47,7 +48,8 @@ get_header(); ?>
 				    </div>
 				    <?php endif;?>
 				    
-			    </section>		
+			    </section>	
+			    	
 
 				<?php if($copy = get_field('announcement_copy')):?>
 				<section class="announcement-copy cream-bg big-copy">
@@ -78,7 +80,7 @@ get_header(); ?>
 				    <div class="grid-container">
 						<div class="grid-x grid-padding-x">		
 							
-							<div class="left cell small-12 tablet-6 xxlarge-7"> 
+							<div class="left cell small-12 medium-6 xxlarge-7"> 
 								
 								<?php if( have_rows('menu_image_slider') ):?>
 								<div class="menu-slider click-right-slider">
@@ -96,7 +98,7 @@ get_header(); ?>
 								
 							</div>
 							
-							<div class="right cell small-12 tablet-6 large-5 large-offset-1 xxlarge-4 xxlarge-offset-1">
+							<div class="right cell small-12 medium-6 large-5 large-offset-1 xxlarge-4 xxlarge-offset-1">
 								
 								<h2><?php the_field('menu_heading');?></h2>
 								
@@ -185,7 +187,8 @@ get_header(); ?>
 				    <div class="grid-container">
 						<div class="grid-x grid-padding-x">	
 							
-							<div class="cell small-12 medium-4">
+							<div class="copy-wrap cell small-12 medium-4">
+								
 								<h2><?php the_field('ig_heading');?></h2>
 								<p class="big-copy"><?php the_field('ig_copy');?></p>		
 								
