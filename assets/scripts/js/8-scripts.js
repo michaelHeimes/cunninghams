@@ -12,7 +12,7 @@
 		$('header.header').removeClass('off-canvas-content is-open-right has-transition-push');
 	});	
 	
-	// SHome Hero Slider
+	// Home Hero Slider
 	if ($('.hero-slider').length) {
 		$('.hero-slider').slick({
 			infinite: true,
@@ -26,6 +26,70 @@
 			rows: 0
 			
 		});
+	}
+	
+	// Home Community Numbers Count Up
+	if ($('section#community').length) {
+		
+// 		var $col1Value = $('section.community .columns-wrap .single-column:nth-child(1) .number');
+		
+		var $number1 = site_js.col_1_number;
+		var $number2 = site_js.col_2_number;
+		var $number3 = site_js.col_3_number;
+		
+		var counter = { var: 0 };
+		
+		var tal1 = document.getElementById("sc-1");
+		
+		gsap.to(counter, 2, {
+			var: $number1,
+			onUpdate: function() {
+			tal1.innerHTML = numberWithCommas(Math.ceil(counter.var));
+			},
+			ease: Circ.easeOut,
+			scrollTrigger: {
+			    trigger: 'section#community',
+			    start: 'top 75%',
+			    toggleActions: 'play none play reverse'
+			}
+		});
+
+		var tal2 = document.getElementById("sc-2");
+		
+		gsap.to(counter, 2, {
+			var: $number2,
+			onUpdate: function() {
+			tal2.innerHTML = numberWithCommas(Math.ceil(counter.var));
+			},
+			ease: Circ.easeOut,
+			scrollTrigger: {
+			    trigger: 'section#community',
+			    start: 'top 75%',
+			    toggleActions: 'play none play reverse'
+			}
+		});
+		
+		var tal3 = document.getElementById("sc-3");
+		
+		gsap.to(counter, 2, {
+			var: $number3,
+			onUpdate: function() {
+			tal3.innerHTML = numberWithCommas(Math.ceil(counter.var));
+			},
+			ease: Circ.easeOut,
+			scrollTrigger: {
+			    trigger: 'section#community',
+			    start: 'top 75%',
+			    toggleActions: 'play none play reverse'
+			}
+		});
+		
+		function numberWithCommas(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+		
+		
+		
 	}
 	
 	// Slide Right Sliders

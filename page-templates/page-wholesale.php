@@ -50,7 +50,7 @@ get_header(); ?>
 				</section>
 
 
-				<section class="partner-logos cream-bg">
+				<section class="partner-logos">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">	
 							

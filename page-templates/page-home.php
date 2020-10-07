@@ -51,6 +51,7 @@ get_header(); ?>
 			    </section>	
 			    	
 
+<!--
 				<?php if($copy = get_field('announcement_copy')):?>
 				<section class="announcement-copy cream-bg big-copy">
 					<div class="grid-container">
@@ -61,10 +62,12 @@ get_header(); ?>
 						</div>
 					</div>
 				</section>	
-				<?php endif;?>		    
+				<?php endif;?>	
+-->	    
 
 			    
 			    <section class="intro-copy">
+<!--
 				    <div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							<div class="cell small-12 medium-10 medium-offset-1 large-8 large-offset-2 text-center">
@@ -73,6 +76,7 @@ get_header(); ?>
 							</div>
 						</div>
 				    </div>
+-->
 			    </section>				
 			    	
 			    
@@ -137,30 +141,40 @@ get_header(); ?>
 				    
 				    <div class="grid-container">
 						<div class="columns-wrap grid-x grid-padding-x">	
-							
-							<?php if( have_rows('itc_facts_and_figures') ):?>
-								<?php while ( have_rows('itc_facts_and_figures') ) : the_row();?>	
-								
-								<?php if( have_rows('single_column') ):?>
-									<?php while ( have_rows('single_column') ) : the_row();?>	
-								
-									<div class="single-column cell small-12 medium-4 text-center">
-										<div class="inner">
-											<h2 class="number">
-												<?php the_sub_field('number');?>
-											</h2>
-											<div class="copy">
-												<?php the_sub_field('copy');?>
-											</div>
-										</div>
+
+							<div class="single-column cell small-12 medium-4 text-center">
+								<div class="inner">
+									<h2 id="sc-1" class="number">
+										<?php the_field('itc_column_1_number');?>
+									</h2>
+									<div class="copy">
+										<?php the_field('itc_column_1_copy');?>
 									</div>
-								
-									<?php endwhile;?>
-								<?php endif;?>
+								</div>
+							</div>
 							
-								<?php endwhile;?>
-							<?php endif;?>
+							<div class="single-column cell small-12 medium-4 text-center">
+								<div class="inner">
+									<h2 id="sc-2" class="number">
+										<?php the_field('itc_column_2_number');?>
+									</h2>
+									<div class="copy">
+										<?php the_field('itc_column_2_copy');?>
+									</div>
+								</div>
+							</div>
 							
+							<div class="single-column cell small-12 medium-4 text-center">
+								<div class="inner">
+									<h2 id="sc-3" class="number">
+										<?php the_field('itc_column_3_number');?>
+									</h2>
+									<div class="copy">
+										<?php the_field('itc_column_3_copy');?>
+									</div>
+								</div>
+							</div>																		
+						
 						</div>
 				    </div>
 							
